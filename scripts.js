@@ -9,6 +9,21 @@ function getDataFromId(formulaInputId) {
 function setResult(targetElement, result) {
     const target = document.getElementById(targetElement);
     target.innerText = result
+    if (targetElement.includes('triangle')) {
+        const p = document.createElement('p')
+        p.innerText = `$$. Triangle     ${result}cm²`;
+        // console.log(p);
+        const areaCal = document.getElementById('areaCalculation');
+        areaCal.appendChild(p)
+    }
+    if (targetElement.includes('rectangle')) {
+        const p = document.createElement('p')
+        p.innerText = `$$. Rectangle    ${result}cm²`;
+        // console.log(p);
+        const areaCal = document.getElementById('areaCalculation');
+        areaCal.appendChild(p)
+    }
+
 }
 
 // <-- triangle formula -->
