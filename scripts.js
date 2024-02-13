@@ -5,23 +5,50 @@ function getDataFromId(formulaInputId) {
     return validInput
 
 }
+const ol = document.createElement('ol')
+ol.classList.add('list-decimal')
+const areaCal = document.getElementById('areaCalculation');
+areaCal.appendChild(ol)
 
 function setResult(targetElement, result) {
     const target = document.getElementById(targetElement);
     target.innerText = result
+
     if (targetElement.includes('triangle')) {
-        const p = document.createElement('p')
-        p.innerText = `$$. Triangle     ${result}cm²`;
-        // console.log(p);
-        const areaCal = document.getElementById('areaCalculation');
-        areaCal.appendChild(p)
+        const li = document.createElement('li')
+        li.innerText = `Triangle    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
     }
     if (targetElement.includes('rectangle')) {
-        const p = document.createElement('p')
-        p.innerText = `$$. Rectangle    ${result}cm²`;
-        // console.log(p);
-        const areaCal = document.getElementById('areaCalculation');
-        areaCal.appendChild(p)
+        const li = document.createElement('li')
+        li.innerText = `Rectangle    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
+    }
+    if (targetElement.includes('parallelogram')) {
+        const li = document.createElement('li')
+        li.innerText = `Parallelogram    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
+    }
+    if (targetElement.includes('rhombus')) {
+        const li = document.createElement('li')
+        li.innerText = `Rhombus    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
+    }
+    if (targetElement.includes('pentagon')) {
+        const li = document.createElement('li')
+        li.innerText = `Pentagon    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
+    }
+    if (targetElement.includes('ellipse')) {
+        const li = document.createElement('li')
+        li.innerText = `Ellipse    ${result} cm²`;
+        // console.log(li);
+        ol.appendChild(li)
     }
 
 }
