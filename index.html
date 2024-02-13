@@ -36,17 +36,19 @@
         <!-- main content container -->
         <div class="flex flex-col mx-[50px] mt-6 md:flex-row">
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div id="shapeContainer" class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Triangle card -->
-                <div class="card py-[50px] w-full bg-base-100 shadow-xl">
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
                     <figure><img src="images/triangle.png" alt="Triangle" /></figure>
                     <div class="card-body text-center px-[43px]">
                         <h2 class="card-title mx-auto">Triangle</h2>
                         <p>Area (A) = 0.5 X b X h</p>
                         <div class="my-[22px]">
+                            <!-- Triangle base -->
                             <input id="triangle-base" class="w-[95px] pl-3 py-[7px] rounded bg-[rgb(241,241,241)]"
                                 type="text" placeholder="b">
                             <span class="ml-2 mr-4">cm</span>
+                            <!-- Triangle height -->
                             <input id="triangle-height" class="w-[95px] pl-3 py-[7px] rounded bg-[rgb(241,241,241)]"
                                 type="text" placeholder="h">
                             <span class="ml-2 mr-4">cm</span>
@@ -61,7 +63,7 @@
                     </div>
                 </div>
                 <!-- Rectangle card -->
-                <div class="card py-[50px] w-full bg-base-100 shadow-xl">
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
                     <figure><img src="images/rectangle.png" alt="rectangle" /></figure>
                     <div class="card-body text-center px-[43px]">
                         <h2 class="card-title mx-auto">Rectangle</h2>
@@ -86,7 +88,7 @@
                     </div>
                 </div>
                 <!-- Parallelogram card -->
-                <div class="card py-[50px] w-full bg-base-100 shadow-xl">
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
                     <figure><img src="images/parallelogram.png" alt="parallelogram" /></figure>
                     <div class="card-body text-center px-[43px]">
                         <h2 class="card-title mx-auto">Parallelogram</h2>
@@ -113,19 +115,33 @@
                     </div>
                 </div>
                 <!-- Rhombus card -->
-                <!-- <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
+                    <figure><img src="images/rhombus.png" alt="rhombus" /></figure>
+                    <div class="card-body text-center px-[43px]">
+                        <h2 class="card-title mx-auto">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub> </p>
+                        <div class="my-[22px]">
+                            <!-- rhombus base -->
+                            <input id="rhombus-base" class="w-[95px] pl-3 py-[7px] rounded bg-[rgb(241,241,241)]"
+                                type="text" placeholder="d₁">
+                            <span class="ml-2 mr-4">cm</span>
+                            <!-- rhombus height -->
+                            <input id="rhombus-height" class="w-[95px] pl-3 py-[7px] rounded bg-[rgb(241,241,241)]"
+                                type="text" placeholder="d₂">
+                            <span class="ml-2 mr-4">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-xl">Area: <span id="rhombus-area"></span><span> cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                        <div class="card-actions mt-[29px]">
+                            <button onclick="calculateRhombusArea()"
+                                class="btn btn-primary w-full text-xl font-bold">Calculate</button>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- Pentagon card -->
-                <div class="card py-[50px] w-full bg-base-100 shadow-xl">
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
                     <figure><img src="images/pentagon.png" alt="pentagon" /></figure>
                     <div class="card-body text-center px-[43px]">
                         <h2 class="card-title mx-auto">Pentagon</h2>
@@ -151,7 +167,7 @@
                     </div>
                 </div>
                 <!-- Ellipse card -->
-                <div class="card py-[50px] w-full bg-base-100 shadow-xl">
+                <div class="forMouseHover card py-[50px] w-full bg-base-100 shadow-xl">
                     <figure><img src="images/ellipse.png" alt="ellipse" /></figure>
                     <div class="card-body text-center px-[43px]">
                         <h2 class="card-title mx-auto">Ellipse</h2>
@@ -187,7 +203,8 @@
             </div>
         </div>
     </main>
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
+    <script src="for-mouse-hover.js"></script>
 </body>
 
 </html>
